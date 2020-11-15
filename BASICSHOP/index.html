@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./media/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./media/css/index.css">
+    <link rel="icon" href="./media/img/logo + img/basic_brand.png">
+    <title>BASIC SHOP</title>
+</head>
+<body>
+    <!-- Them sua xoa sp -->
+    <div id="suaxoa" style="overflow-x: scroll ; display: none;">
+        <div id="nutsuaxoa" style="font-weight: bold; font-size: 2rem;">X</div>
+        <input type="text" placeholder="id" id="new_id">
+        <input type="text" placeholder="ten bai tho" id="new_tenbaitho">
+        <input type="number" placeholder="nam sang tac" id="new_namsangtac">
+        <input type="text" placeholder="Noi dung" id="new_noidung">
+        <input type="text" placeholder="The tho" id="new_thetho">
+        <input type="text" placeholder="Ten tac gia" id="new_tentacgia">
+        <input type="text" placeholder="Anh 1" id="new_anh1">
+        <input type="text" placeholder="Anh 2" id="new_anh2">
+        <input type="text" placeholder="Noi dung tho" id="new_ndTho">
+        <button id="Aadd_btn">Add</button>
+        <button id="Aclear_btn">Clear</button>
+       <div class="TlistPro"> 
+           <table>
+            <thead>
+                <th>Id</th>
+                <th>Tên bài thơ</th>
+                <th>Năm sáng tác</th>
+                <th>Nội dung</th>
+                <th>Thể thơ</th>
+                <th>Tên tác giả</th>
+                <th>Ảnh 1</th>
+                <th>Ảnh 2</th>
+                <th>Thơ</th>
+                <th>Button</th>
+            </thead>
+            <tbody id="MaTable" >
+
+             </tbody>
+           </table>
+        </div>
+    </div>
+    <!-- Detail Product -->
+    <!-- <h1>Detail Product</h1> -->
+    <div id="show_detail" >
+    <!-- header -->
+    <div class="container">
+        <div id="BoxCart" class="BoxCart">
+            <div id="nutx" style="font-weight: bold; font-size: 2rem;">X</div>
+            <div  style="display: flex;">
+                <div id="tableCart" style="width: 70%; ">
+                    <!-- js code -->
+                </div>
+                <div style="width: 30%; border-left: 1px solid black; padding-left: 10px;">                  
+                        <div class="totalCart" id="totalCart" colspan="7"></div>
+                        <button id="checkout">Checkout</button>
+                </div>
+            <!-- </table> -->
+            </div>
+        </div>
+        
+        <!-- div gio hang  -->
+
+        <!-- div gio hang -->
+        <!-- log in -->
+        <div class="logIn" style="display: flex; justify-content: flex-end;">
+            <!-- <div ><button id="aboutUs" class="logInItems">About us</button></div> -->
+            <div >
+                <!-- <button id="signIn" class="logInItems">Sign In</button> -->
+                <body >
+                    <button class="btn-log" id="btn_login" onclick="document.getElementById('id01').style.display='block'" style="width:auto; "style=' border-radius:5px;' style="margin-left: 95%;">Login</button>
+                    <span>
+                      <p class= "user_name" id="user_name"></p>
+                    </span>
+                    <button class="btn-log" id="btn_logout"onclick="document.getElementById('id02').style.display='block'" style="width: auto;" border-radius:5px >Logout</button>
+                    <button class="btn-log" id="btn_admin">Admin</button>
+                    <div id="id01" class="modal">
+                      
+                      <form class="modal-content animate" id='form' action="">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                          <img src="./media/img/book/ava1.jpg" alt="Avatar" class="avatar">
+                        </div>
+                    
+                        <div class="container1">
+                            <div class="logIn" id="login_form">
+                                <div>
+                                    <label for="username">Tên Đăng Nhập:</label>
+                                    <input class="form-control" type="text" id="userName">
+                                </div>
+                                <div>
+                                    <label for="pwd">Mật Khẩu:</label>
+                                    <input class="form-control" type="password" id="pass">
+                                </div>
+                                <div class="btn_login">
+                                    <button type="submit" class="btn_submit" id="btnSubmit">Đăng Nhập</button>
+                                    <button class="btn_submit" id="btn_register">Đăng Ký</button>
+                                </div>
+                                <!-- <label id="RememberC">
+                                  <input type="checkbox" checked="checked" name="Remember">Remember me
+                                </label> -->
+                        </div>
+                    
+                        <div class="container1" style="background-color:#f1f1f1">
+                          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <div id="in02" class="modal">
+                        <form class="modal-content animate" action="">
+                            <div class="imgcontainer">
+                              <span onclick="document.getElementById('id02').style.display='block'" class="close" title="Close Modal"></span>
+                              <img src="./media/img/book/ava1.jpg" alt="Avatar" class="avatar">
+                            </div>
+                    
+                            <div class="container1">
+                                
+                            <div class="signUp" id="register_form">
+                                <div>
+                                    <label for="username">Tên Đăng Nhập:</label>
+                                    <input type="text" class="form-control" id="newuserName">
+                                </div>
+                                <div>
+                                    <label for="pass">Mật Khẩu:</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                                <div>
+                                    <label for="pass2">Nhập Lại Mật Khẩu:</label>
+                                    <input type="password" class="form-control" id="confirmPassword">
+                                </div>
+                                <div class="btn_login">
+                                    <button class="btn_submit" type="submit" id="btnRegister">Đăng Ký</button>
+                                </div>
+                                <!-- <label>
+                                  <input type="checkbox" checked="checked" name="Remember">Remember me
+                                </label> -->
+                                <div class="container" style="background-color:white">
+                                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                </div>
+                            </div>
+                    </div>
+                
+            </div>
+    </div>
+    
+        <!-- log in --> 
+
+        <nav class="row" id="logoBar" >
+            <div class="menu-icon" style="padding-left: 20px;"><span class="fas fa-bars" id="menu-icon-bars"></span></div>
+            <!-- <div class="col-4" > -->
+                <div id="logo" ><img src="./media/img/logo + img/basic_brand.png" style="height: 50px;" alt=""></div>
+            <!-- </div> style="width: 30%;" -->
+            <!-- <div class="col-8" >  style="width: 70%; display: flex;" -->
+                
+                <div class="menu-items" >
+
+                    <li><button class="btn_menu" id="proMen">Thơ tự do</button></li>
+                    <li><button class="btn_menu" id="proWomen">Thơ năm chữ</button></li>
+                    <li><button class="btn_menu" id=""><a href="#footer" style="background-color:transparent;color: black;border-radius: 10px; text-decoration: none;">Thông tin</a></button></li>
+                    <li><button class="btn_menu" id="" ><a href="#footer" style="background-color:transparent;color: black;border-radius: 10px; text-decoration: none;">Liên lạc</a></button></li>
+                    <li><button class="btn_menu" id=""><a href="#footer" style="background-color:transparent;color: black;border-radius: 10px; text-decoration: none;">Kiểm Tra</a></button></li>
+
+                </div>
+                <div  style="display: flex;">
+                    <form class="form-search" id="form-search" >
+                        <div class="box-search" style="position: relative;">
+                            <input id="search" type="text" style = "border-radius: 15px;outline: none; " placeholder="search" list="ProductsList" >
+                            <button id="conner" type="button" onclick="getInputValue()" style="border-radius: 50%; outline: none; " ><i class="fa fa-search"></i></button> 
+                            <!-- padding-right: 23px; padding-top: 4px; -->
+                        </div>
+                        <datalist id="ProductsList">
+
+                        </datalist>
+                                        
+                    </form>
+                    <button id="shopCart" style="background-color:white; border: none; outline: none; cursor: pointer;"><div class="fa fa-shopping-cart" id="numberCard"></div></button>
+                </div>
+            <div class="search-icon" id="search-icon"><span class="fas fa-search"></span></div>
+            <div class="cancel-icon"><span class="fas fa-times"></span></div>
+            
+            </nav>
+
+        <div class="sliderShow">
+            <div id="menuItems">
+                <img src="./media/img/book/slide1.jpg" class="mySlides" style="width:100%" alt="">
+                <img src="./media/img/book/slide2.jpg" class="mySlides" style="width:100%" alt="">
+                <img src="./media/img/book/slide3.jpg" class="mySlides" style="width:100%" alt="">
+                <img src="./media/img/book/slide4.jpg" class="mySlides" style="width:100%" alt="">
+            </div>
+ 
+            <button class="w3-button w3-display-left" id="prev" style="border : none; background-color: none;" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" id="next" style="border : none; background-color: none;" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    
+        <!-- header -->
+        <!-- main -->
+        <div id="main" style="">
+            <!-- sort by  -->
+            <div class="show_type" style="  position: relative; display: flex; justify-content: flex-end; padding-top: 10px; padding-bottom: 10px;">
+                <div >Sort by :</div>
+                <select name="" id="sortby" class="showSort" style="border: none; color: gray; outline: none;">
+                    <option value="default">Default</option>
+                    <option value="low" >Price: Low - High</option>
+                    <option value="high" >Price: High - Low</option>
+                </select>
+            </div>
+            <!-- sort by -->
+            <!-- filter btn + products -->
+            <div class="row" id="row-items">
+                <div class="col-2" id="brand-items" style="width: 25%; ">
+                    <div class="box-brand-items" >
+                        <div>
+                            <button class="brand" id="apparel">Thơ tự do</button>
+                        </div>
+                        <div>
+                            <button class="brand" id="shoes">Thơ bảy chữ</button>
+                        </div>
+                        <div>
+                            <button class="brand" id="accessories">Thơ năm chữ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- show sản phẩm -->
+                <div id="showList" class="col-7" >
+                    <!-- products -->
+                </div>
+                
+                <!-- </div> -->
+        <!-- main -->
+    </div>
+    <div class="bigBoxFooter" style="background-color: black; color: white;">
+        <!-- <button onclick= "toTheTop()" id="to_the_top_button" title="Go to top" style="display: flex;justify-content: center;" href ="#logoBar">&#9650;</button> -->
+    <div id="footer" style="display: flex; padding-top: 20px; ">
+        <div class="box-left" style="width: 70%; display: flex; padding-left: 5%;">
+            <div id="bottom-left" class="bottom_layout">
+                <p>FIND A STORE</p>
+                <P>BECOME A MEMBER</P>
+                <p>SIGN UP FOR EMAIL</p>
+                <p>SEND US FEEDBACK</p>
+        </div>
+        <div id="bottom-center" class="bottom_layout">
+            
+            <ul id="help-bottom">
+                <p><a href="./aboutus/contact.html">Phản Hồi</a></p>
+                <p>Order Status</p>
+                <p>Delivery</p>
+                <p>Returns</p>
+                <p>Payment Option</p>
+                <p>Contact Us</p>
+            </ul>
+        </div>
+         <div id="bottom-right" class="bottom_layout">
+            <ul id="aboutus-bottom">
+                <p><a href="./aboutus/about.html">Kiểm Tra</a></p>
+                <p>News</p>
+                <p>Careers</p>
+                <p>Investors</p>
+                <p>Sustainability</p>
+            </ul>
+         </div> 
+        </div>            
+        <div class="box-right" style="width: 30%;">
+            <ul>
+                <a href="https://www.facebook.com/leeviethoo"><i class='fab fa-facebook' style='font-size:36px'></i></a>
+                <a href="https://www.instagram.com/ailaviettt/"><i class='fab fa-instagram' style='font-size:36px'></i></a>
+                <a href="https://www.youtube.com/watch?v=V5GS5ANG96M&ab_channel=W%2Fn"><i class='fab fa-github' style='font-size:36px'></i></a>
+                <a href="https://www.youtube.com/watch?v=ql0e9SdngD8&ab_channel=LyLyOfficial"><i class='fab fa-youtube' style='font-size:36px'></i></a>
+            </ul>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="footer2" style="text-align: center;" >
+        
+        <span>
+            <i class="fa fa-thumb-tack" style="font-size:16px ; font-family:monospace; padding-left: 50px;" id="location"> Vietnam</i>
+        </span>
+        <div id="author" class="content" >Copyright &copy;
+            <script> document.write(new Date().getFullYear());</script> All rights reserved |  Basic Brand, Inc. 
+        </div>
+    </div>
+    </div>
+    </div>
+
+  
+    
+</body>
+<script src="./media/js/data.js"></script>
+<script src="./media/js/basic.js"></script>
+<script src="./media/js/login2.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</html>

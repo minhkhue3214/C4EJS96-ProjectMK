@@ -1,0 +1,480 @@
+*{
+    box-sizing: border-box;
+}
+.mySlides{
+    display: none;
+}
+
+.container{
+    height:200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* display: ; */
+    /* z-index: -1; */
+}
+.box-brand-items{
+    /* border-bottom:1px solid black; */
+    border-top:1px solid black;
+    padding-left: 15%;
+}
+.brand{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.brand:hover{
+    background-color: black;
+    color: white;
+    /* border-bottom: 1px solid black; */
+    outline: none;
+}
+#logoBar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 100px; */
+}
+nav{
+    padding:  0 100px;
+}
+.logIn{
+    right: 0px;
+    top :0;
+    
+}
+#logo{
+    text-align: center;
+}
+#logoBar{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.logInItems{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.btn_menu{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    letter-spacing: 3px;
+}
+.btn_menu:hover{
+    border-bottom: solid;
+    /* background-color: black;
+    color: white; */
+}
+
+#menuItems .silderItems{
+    display: none;
+    width: 50%;
+}
+#btn_left{
+    text-align: center;
+}
+#showList{
+    width: 70%;
+} 
+.sliderShow{
+    position: relative;
+    margin-top: 0px;
+}
+.main{
+    margin-top: 10px;
+}
+.filter-li{
+
+}
+#showList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+#showList .productItem
+{
+    width: 30%;
+    margin-left: 2em;
+
+}
+#showList .productItem .productTit{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+.productImg0 {
+    display: flex;
+    justify-content: center;
+}
+.productImg1 {
+    display: flex;
+    justify-content: center;
+}
+#showList .productItem .productTit:hover{
+    white-space: normal;
+}
+#showList .productItem .productImg{
+
+}
+#showList .productItem .productImg0 img{
+    width: 100%;
+}
+.productsImg:hover .productImg0{
+    /* display: none; */
+    visibility: hidden;
+    
+}
+.productItem .productImg1 img{
+    width: 100%;
+}
+.productsImg:hover .productImg1{
+    z-index: 99;
+}
+#search{
+    position: absolute;
+    right: 0;
+}
+#conner{
+    position: absolute;
+    right: 0;
+    color: white;
+    background-color: black;
+    z-index: 1;
+}
+.brand{
+    padding-bottom: 10px;
+}
+/* responsive mobie */
+.menu-icon,
+.search-icon,
+.cancel-icon{
+    width: 40px;
+    /* text-align: center; */
+    margin: 0, 50px;
+    cursor: pointer;
+    display: none;
+    /* text-align: center; */
+} 
+.menu-icon span,
+.search-icon,
+.cancel-icon{
+    display: none;
+} 
+.menu-items{
+    display: flex;
+    list-style: none;
+    padding: 0 0 0 160px;
+    flex: 1;
+    
+}
+.form-search{
+    background-color: red;
+}
+.menu-items li{
+    padding: 0 15px;
+    
+}
+
+#row-items {
+    /* flex-direction: row; */
+    display: flex;
+    
+}
+.col-7{
+    width: 0%;
+}
+/* .contact{
+    width:50%; 
+    color: white; 
+    padding-top: 20px; 
+    margin-left: 30px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+} */
+.boxItems{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btnToCart:hover{
+    background-color: black!important;
+    color: white;
+}
+.BoxCart{
+    /* display: none; */
+}
+.show{
+
+}
+/**/
+
+/* #ProductsList{
+    margin-right: 10%;
+} */
+
+@media screen and (max-width : 1245px){
+    nav{
+        padding: 0 50px;
+    }
+}
+
+
+@media screen and (max-width : 1140px){
+    nav{
+        padding: 0;
+    }
+    nav #logo{
+        flex: 2;
+        text-align: center;
+    }
+    .form-search{     
+        position: fixed;
+        display: none;
+        z-index: 98;
+        top: 0px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        right: -100%;
+        height: 100%;
+        background-color: black;
+        display: inline-block;
+        padding: 10px 50px 0 50px;
+        transition: right 0.3s ease;
+    }
+    #shopCart{
+        /* display: none; */
+        
+    }
+    
+    .btn_menu{
+        color: white;
+    }
+    .menu-items{
+        position: fixed;
+        z-index: 98;
+        top: 0px;
+        width: 90%;
+        left: -100%;
+        height: 100%;
+        background-color: black;
+        display: inline-block;
+        padding: 10px 50px 0 50px;
+        transition: left 0.3s ease;
+    }
+    .row .active{
+        margin-left: 5%;
+        margin-right: 5%;
+        left: 0px;
+        
+        /* background-color: red; */
+
+    }
+    .active1{
+        right: 0 !important;
+    }
+    .hide{
+        display: none;
+    }
+    .row .show{
+        display: block;
+        z-index: 99;
+        color: white;
+        /* background-color: red; */
+    }
+    .menu-items li{
+        line-height: 40px;
+        margin: 30px 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .search-icon,
+    .menu-icon span{
+        display: block;
+    }
+    .box-search{
+        /* position: absolute; */
+        top: 20px;
+        right: 50%;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 100%;
+      
+    }
+    .filter-ul{
+        top: 100px;
+        text-align: center;
+        margin-right: 10%;
+        margin-left: 10%;
+        /* display: block; */
+    }
+    #row-items{
+        flex-direction: column;
+        /* display: table-cell; */
+    }
+    #brand-items {
+        display: flex;
+    }
+    #brand-items .box-brand-items{
+        display: flex;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+        
+    }
+    .brand{
+        font-size: 11px;
+    }
+    #showList{
+        width: 100%;
+    }
+    #showList .productItem{
+        width: 42%;
+        margin-left: 2em;
+    }
+    /* .box-search::before{
+        position: absolute;
+        content: "";
+        top: -13px;
+        right: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border: 10px solid transparent;
+        border-bottom-color: red;
+    } */
+}
+.detailPro:hover {
+    color: red;
+    cursor: pointer;
+}
+#nutx:hover,#nutsuaxoa:hover{
+    color: red;
+    cursor: pointer;
+}
+/*css cho login*/
+/* .signUp{
+    margin-top: 20px;
+}
+.btn{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 55px;
+}
+.btn-login button{
+    margin-top: 20px;
+    margin-left: 0%;
+    background-color: black;
+}
+.form-control {
+    display: flex;
+}
+.cart-header i,
+    span {
+        float: right;
+        font-size: 27px;
+        color: white;
+        padding: 0 5px;
+    }
+.cart-header .btn-logout {
+    padding: 11px 15px;
+    border: 0px;
+    background-color: black;
+    color: white;
+}
+.fa-map-marked-alt{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.form-control input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid;
+    box-sizing: border-box ;
+}
+
+button{
+    background-color:transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+button:hover{
+    border-bottom: 1px solid black;
+}
+.cancelbtn{
+    width: 100%;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.imgcontainer{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+img.avatar{
+    width: 40%;
+    border-radius: 50% ;
+}
+.containerlogin {
+    padding: 16px;
+}
+span.psw{
+    float: right;
+    padding-top: 16px;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0,0);
+    background-color: rgba(0,0,0,4);
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 20%;
+}
+.close{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus{
+    color:red;
+    cursor: pointer;
+} */
+/*cart css*/
+
+p {
+    margin: 0%;
+}
+
+th,td{    width: 3000px;
+    height: 50px;
+    font-family: "Trebuchet MS", Arial,Helvetica, sans-serif;
+    text-align: center;
+    background-color:black;
+    color:white;
+    padding: 5px;
+    border: 1px solid;
+  }
+
