@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <form id="form" name="f1">
+        <p>Tìm số ngày của tháng trong năm<br>
+        <select name="thang">
+            <option>January</option>
+            <option>Febuary</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select><br>
+        <input type="textbox" name="year"value="Nhập năm" pattern="[0-9]{1,15}"><br>
+        <input type="button" name="nhan" value="Nhấn" onclick="TinhNgay()"></p>
+        
+    
+    
+    </form>
+    <style>
+        #form{
+            background-color: tomato;
+            width: 20%;
+        }
+    </style>
+    
+</body>
+</html>

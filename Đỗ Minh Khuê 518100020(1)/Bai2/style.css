@@ -1,0 +1,15 @@
+h1{
+    font-size: larger;
+    color: yellow;
+}
+
+.khue{
+    font-size: medium;
+    color: turquoise;
+}
+
+#khue{
+    background-color: tan;
+    font-size: xx-large;
+    color: wheat;
+}
